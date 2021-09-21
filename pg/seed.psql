@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.3
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 13.4
+-- Dumped by pg_dump version 13.4
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,6 +19,34 @@ SET row_security = off;
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
+
+--
+-- Name: contacts; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.contacts (
+    id integer NOT NULL,
+    last_name text NOT NULL,
+    first_name text NOT NULL,
+    email text,
+    phone text NOT NULL,
+    notes text
+);
+
+
+--
+-- Name: contacts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+ALTER TABLE public.contacts ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME public.contacts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
 
 --
 -- Name: tasks; Type: TABLE; Schema: public; Owner: -
@@ -58,6 +86,18 @@ ALTER TABLE ONLY public.tasks ALTER COLUMN id SET DEFAULT nextval('public.tasks_
 
 
 --
+-- Data for Name: contacts; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.contacts (id, last_name, first_name, email, phone, notes) FROM stdin;
+1	Smith	Susan	ssmith@gmail.com	4151234567	Called on 09/20/2021 at 2:20 p.m.
+2	Jackson	Brian	bjackson@gmail.com	5109876543	Met for lunch on August 2, 2021 at 11:30 a.m.
+3	Sampson	Rebecca	rsampson@gmail.com	3014561278	Left a message on 03/01/2021 at 4:33 p.m.
+4	Thornton	Sloan	sloan_thornton@gmail.com	8023459876	Meeting set for 10/15/2021 at 1:15 p.m.
+\.
+
+
+--
 -- Data for Name: tasks; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -68,6 +108,13 @@ COPY public.tasks (id, name) FROM stdin;
 4	Advocate for living wage
 5	Provide universal health care
 \.
+
+
+--
+-- Name: contacts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.contacts_id_seq', 4, true);
 
 
 --
