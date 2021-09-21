@@ -2,12 +2,14 @@ import * as React from "react";
 
 import { Routes, Route, Link } from "react-router-dom";
 
-import Tasks from "./Tasks";
+import Contacts from "./Contacts";
+
+import "./App.css";
 
 const App = () => (
   <main>
     <nav>
-      <Link to="/">Home</Link> | <Link to="dashboard">Dashboard</Link>
+      {/* <Link to="/">Home</Link> | <Link to="dashboard">Dashboard</Link> */}
     </nav>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -18,9 +20,11 @@ const App = () => (
 
 const Home = () => (
   <>
-    <h1>{process.env.REACT_APP_TITLE}</h1>
-    <h2>{process.env.REACT_APP_SUBTITLE}</h2>
-    <Tasks />
+    {/* <h1>{process.env.REACT_APP_TITLE}</h1>
+    <h2>{process.env.REACT_APP_SUBTITLE}</h2> */}
+    <div>
+      <Contacts />
+    </div>
   </>
 );
 

@@ -1,0 +1,247 @@
+.font-link {
+  font-family: "Heebo", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Spartan", sans-serif;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* background-color: rgb(238, 232, 241); */
+  /* background-color: rgb(234, 233, 247); */
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 55px;
+  color: rgb(255, 162, 0);
+  text-shadow: 1px 1.5px 0px rgb(0, 0, 0);
+  line-height: 1em;
+}
+
+#title_subtitle {
+  position: absolute;
+  top: 530px;
+  left: 100px;
+  font-family: "Spartan", sans-serif;
+  font-size: 22px;
+  color: rgb(218, 208, 208);
+  text-shadow: 1px 1.5px 0px rgb(0, 0, 0);
+  line-height: 1.1em;
+}
+
+#title_subtitle_2 {
+  /* position: absolute;
+    top: 530px;
+    left: 100px;
+    font-family: "Spartan", sans-serif;
+    font-size: 22px; */
+  color: rgb(190, 185, 185);
+  /* text-shadow: 1px 1.5px 0px rgb(0, 0, 0);
+    line-height: 1.1em; */
+}
+
+h2 {
+  font-family: "Heebo", sans-serif;
+  font-size: 155px;
+  color: rgba(255, 174, 0, 0.664);
+  /* text-shadow: 1px 1.5px 0px rgb(231, 231, 231); */
+}
+
+h3 {
+  font-family: "Heebo", sans-serif;
+  color: rgba(243, 218, 247, 0.664);
+  text-shadow: 0.5px 0.5px 0px rgb(0, 0, 0);
+}
+
+fieldset {
+  border: none;
+  margin: 1rem 0;
+}
+
+/* header {
+    /* For more about flexbox, see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+/* display: flex;
+    align-items: center;
+    margin-top: -2em;
+  }
+  
+  header img {
+    height: 64px;
+    margin-right: 1em;
+    margin-top: -1em;
+  } */
+
+main {
+  display: flex;
+  content: center;
+  justify-content: space-between;
+  /* /* /* margin-top: -1em; */
+}
+
+/* aside {
+    margin-left: 2em;
+  }
+  
+  footer {
+    font-family: monospace;
+    margin-top: 3rem;
+    font-size: small;
+    color: gray;
+  } */
+
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  /* background: rgb(0, 0, 0); */
+  background-image: url("image.jpeg");
+  background-position: absolute;
+}
+section {
+  box-sizing: border-box; /* or not */
+  margin: 0 auto;
+  width: 25rem;
+  background: rgba(32, 25, 25, 0.75);
+  opacity: 0.9;
+  padding: 1.5rem;
+}
+h2,
+.full-width {
+  position: relative; /* child absolute */
+  margin: 0 -9999rem;
+  /* add back section padding value */
+  padding: 0.25rem 9999rem;
+  background: #666;
+  font-family: Spartan;
+  background: rgba(4, 104, 255, 0.6);
+  color: rgb(135, 158, 248);
+  text-shadow: 1px 1.5px 0px rgb(0, 0, 0);
+  font-size: 1.38rem;
+  line-height: 1.5rem;
+  padding-top: 9px;
+}
+/* .tinted {
+    z-index: 0;
+  } */
+
+/* .tinted:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    /* subtract h2 padding */
+/* left: 9997.5rem;
+    right: 9997.5rem;
+    background: green;
+  } */
+#list_common_name {
+  font-family: "Spartan", sans-serif;
+  font-size: 18px;
+  color: rgb(255, 196, 0);
+  cursor: no-drop;
+  cursor: url("Cursor_Delete.png"), auto;
+  /* cursor: url("delete_doc.png"), auto; */
+}
+
+#list_scientific_name {
+  font-family: "Spartan", sans-serif;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  /* cursor: copy; */
+  cursor: pointer;
+}
+
+#list_timestamp {
+  color: rgb(146, 129, 129);
+}
+
+#list_location {
+  color: rgb(202, 176, 176);
+}
+
+#list_location_title {
+  color: rgb(202, 176, 176);
+}
+
+#list_title {
+  color: rgb(255, 162, 0);
+}
+
+#list_li {
+  font-family: "Spartan", sans-serif;
+  font-size: 18px;
+  color: rgb(255, 196, 0);
+}
+
+#input_location {
+  width: 140px;
+  margin-left: 59px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  background-color: rgb(107, 97, 97);
+  color: rgb(179, 156, 156);
+}
+
+#input_scientific-name {
+  width: 140px;
+  margin-left: 8px;
+  margin-top: 2px;
+  background-color: rgb(107, 97, 97);
+  color: rgb(255, 255, 255);
+}
+
+#input_common-name {
+  width: 140px;
+  margin-left: 7px;
+  background-color: rgb(107, 97, 97);
+  color: rgb(255, 196, 0);
+}
+
+form {
+  color: rgb(116, 145, 248);
+}
+
+#detail-body {
+  font-family: "Spartan", sans-serif;
+  /* background-color: rgb(238, 232, 241); */
+  /* background-color: rgb(234, 233, 247); */
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+}
+
+#contactlist-title {
+  position: absolute;
+  top: -60px;
+  left: -10px;
+  font-family: Spartan;
+  font-size: 40px;
+  color: rgb(104, 114, 223);
+  text-shadow: 1px 1.5px 0px rgb(0, 0, 0);
+}
+#list {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  /* color: rgb(191, 205, 250); */
+  color: rgb(166, 170, 220);
+  font-family: Roboto;
+  font-size: 18px;
+  text-shadow: 1px 1.5px 0px rgb(0, 0, 0);
+  line-height: 2em;
+}
+
+#list-name {
+  font-family: Spartan;
+  font-size: 22px;
+  /* color: rgb(166, 170, 220); */
+  color: rgb(209, 218, 245);
+  text-shadow: 1px 1.5px 0px rgb(0, 0, 0);
+}
